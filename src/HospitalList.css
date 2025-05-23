@@ -1,0 +1,152 @@
+.hospital-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  overflow-x: auto;
+}
+
+.hospital-item {
+  display: flex;
+  align-items: center;
+  padding: 16px 0;
+  border-bottom: 1px solid #ececec;
+  font-size: 1.05rem;
+  gap: 16px;
+}
+
+.hospital-icon {
+  font-size: 1.5rem;
+  margin-right: 12px;
+}
+
+.hospital-info {
+  flex: 1 1 220px;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.hospital-name {
+  font-weight: 600;
+  color: #222;
+  font-size: 1.08rem;
+}
+
+.hospital-specialty {
+  color: #888;
+  font-size: 0.98rem;
+}
+
+.hospital-rating-center {
+  flex: 0 0 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.08rem;
+}
+
+.hospital-rating {
+  color: #f5b50a;
+  font-weight: 600;
+  font-size: 1.08rem;
+}
+
+.hospital-distance {
+  color: #444;
+  min-width: 60px;
+  text-align: right;
+  font-size: 0.98rem;
+}
+
+.hospital-status {
+  min-width: 60px;
+  text-align: right;
+  font-size: 0.98rem;
+  font-weight: 600;
+}
+
+.hospital-status.open {
+  color: #2eaf4a;
+}
+
+.hospital-status.closed {
+  color: #e14c4c;
+}
+
+.hospital-arrow {
+  font-size: 1.5rem;
+  color: #bbb;
+  margin-left: 12px;
+}
+
+.direction-btn {
+  background: #5a4ff3;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 7px 16px;
+  font-size: 0.98rem;
+  font-weight: 500;
+  margin-left: 16px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.direction-btn:hover {
+  background: #4739c6;
+}
+.direction-btn:active {
+  background: #322a8c;
+}
+
+@media (max-width: 700px) {
+  .hospital-item {
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 12px 0;
+    font-size: 0.98rem;
+  }
+  .hospital-info {
+    min-width: 120px;
+  }
+  .hospital-rating-center {
+    flex: 0 0 60px;
+    font-size: 0.98rem;
+  }
+  .hospital-distance, .hospital-status {
+    min-width: 40px;
+    font-size: 0.95rem;
+  }
+  .direction-btn {
+    margin-left: 0;
+    margin-top: 6px;
+    width: 100%;
+    padding: 8px 0;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .hospital-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    padding: 10px 0;
+    font-size: 0.95rem;
+  }
+  .hospital-info {
+    min-width: 0;
+    width: 100%;
+  }
+  .hospital-rating-center {
+    width: 100%;
+    justify-content: flex-start;
+    margin-bottom: 2px;
+  }
+  .direction-btn {
+    width: 100%;
+    margin: 4px 0 0 0;
+    padding: 10px 0;
+    font-size: 1.05rem;
+  }
+} 
